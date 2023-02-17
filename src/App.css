@@ -1,38 +1,468 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+    text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content {
+    margin-top: 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Start Header */
+
+.header {
+    background-color: #131416;
+    padding: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.is-sticky {
+    position: fixed;
+    top: 0;
+    left: 18%;
+    width: 100%;
+    max-width: 1215px;
+    z-index: 999;
+    background-color: #5952e4 !important;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header .btn-close-custom {
+    background-color: #5952e4;
+    opacity: 1;
+}
+
+.header .btn-close-custom i {
+    font-size: 20px;
+}
+
+.btn-close {
+    --bs-btn-close-bg: none
+}
+
+.mobile-menu-items .menu-item {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.mobile-login-btn {
+    background-color: #5952e4 !important;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.mobile-btns button {
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.header .dropdown:hover>.dropdown-menu {
+    display: block !important;
+}
+
+.header .dropdown:hover>body {
+    background-color: rgba(255, 0, 0, .5)
+}
+
+.header .dropdown {
+    position: static;
+}
+
+.header .dropdown-menu {
+    width: 100%;
+    left: 0;
+    top: 60px;
+}
+
+.header .dropdown-title {
+    font-size: 52px;
+    line-height: 82px;
+    color: rgba(36, 36, 42, .2);
+    padding: 20px 30px 12px;
+    border-bottom: 1px solid rgba(36, 36, 42, .1);
+}
+
+.header .dropdown-menu-items {
+    padding: 20px 30px 12px;
+}
+
+.dropdown-menu-items .d-flex.align-items-center {
+    padding: 7px;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+
+.dropdown-menu-items .d-flex.align-items-center:hover {
+    background-color: rgba(89, 82, 228, .1);
+    cursor: pointer;
+}
+
+.header .dropdown-menu-items .dropdown-item-title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.header .container::after {
+    content: '';
+    background-image: url('https://www.tomya.com/assets/img/subpages/sub/brem-bg.svg');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+}
+
+.header img {
+    width: 150px;
+}
+
+.header-navbar {
+    background-color: #5952e4;
+    border-radius: 10px;
+    position: relative;
+}
+
+.header-navbar a {
+    color: #fff;
+    transition: all .4s ease;
+}
+
+.header-navbar ul li {
+    padding: 20px;
+    font-size: 13px;
+}
+
+.header-navbar ul:hover a {
+    opacity: 0.3;
+}
+
+.header-navbar a:hover {
+    opacity: 1 !important;
+}
+
+.header-notification {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.header-notification a {
+    color: #fff;
+    font-weight: 500;
+}
+
+.header-notification .chevron-icon {
+    font-size: 8px;
+}
+
+.header-login-btn a {
+    border: 1px solid #fff;
+    padding: 4px 10px;
+    border-radius: 25px;
+}
+
+.btn-mobile-bar {
+    background-color: #5952e4;
+}
+
+.btn-mobile-bar i {
+    color: #fff;
+}
+
+.mobile-menu-display {
+    display: none;
+}
+
+/* End Header */
+
+/* Start Left Menu */
+
+.left-menu {
+    width: 80%;
+}
+
+.left-menu li {
+    border-bottom: 2px solid #ebebeb;
+}
+
+.left-menu li:last-child {
+    border-bottom: none;
+}
+
+.left-menu a {
+    display: block;
+    width: 100%;
+    padding: 13px 0;
+    color: #24242a;
+    font-size: 15px;
+    transition: color .3s ease;
+}
+
+.left-menu a:hover {
+    color: #5952e4;
+}
+
+.left-menu .active {
+    color: #5952e4;
+    font-weight: 500;
+}
+
+/* End Left Menu */
+
+/* Start Main Content */
+
+.main-content h1 {
+    border-bottom: 2px solid #ebebeb;
+}
+
+.main-content-subtitle {
+    color: #7670ec;
+    text-shadow: 1px 1px 1px;
+    font-size: 25px;
+}
+
+.news-card img {
+    width: 640px;
+    height: 400px;
+}
+
+.main-content .card-link {
+    color: #514ca5;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* End Main Content */
+
+/* Start Footer */
+
+.footer {
+    background-color: #131416;
+    margin-top: 160px;
+}
+
+.footer .account-bar {
+    background-color: #eeeff6;
+    padding: 50px;
+    border-radius: 10px;
+    position: absolute;
+    top: -115px;
+}
+
+.footer .account-bar h4 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.footer .account-bar a {
+    background-color: #5952e4;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
+    padding: 15px 33px;
+    border-radius: 25px;
+}
+
+.footer-content {
+    padding-top: 160px;
+    border-bottom: 1px solid #292a2d;
+    padding-bottom: 35px;
+}
+
+.footer-content h6 {
+    color: #eeeff6;
+    font-size: 15px;
+}
+
+.footer-content li a {
+    color: rgba(238, 239, 246, .5);
+    font-size: 15px;
+}
+
+.footer-content li {
+    margin-bottom: 10px;
+}
+
+.footer-adress {
+    color: #fff;
+    padding: 100px 0;
+}
+
+.footer-adress h6 {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.footer-adress .copyright {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(238, 239, 246, .5);
+}
+
+.footer-adress i {
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.footer-adress i:hover {
+    transform: translate(0, -5px);
+}
+
+.footer .accordion-button {
+    background-color: #131416 !important;
+    border-radius: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
+    color: #fff;
+    border-bottom: 1px solid rgba(238, 239, 246, .1);
+}
+
+.footer .accordion-body {
+    background-color: #131416;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.footer .accordion-item {
+    border: none;
+    border-radius: 0;
+    background-color: #131416;
+}
+
+.footer .accordion {
+    display: none;
+}
+
+/* End Footer */
+
+/* Mediaquery */
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1215px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .header .container::after {
+        display: none;
+    }
+
+    .header-notification {
+        display: none !important;
+    }
+
+    .left-menu-display {
+        display: none;
+    }
+
+    .news-card img {
+        width: 100%;
+    }
+
+    .footer {
+        margin-top: 140px;
+    }
+
+    .footer .account-bar h4 {
+        font-size: 18px;
+    }
+
+    .account-bar .account-btn {
+        margin-top: 75px;
+        text-align: center;
+    }
+
+    .footer .account-bar a {
+        padding: 15px 50px;
+    }
+
+    .footer-content {
+        padding-top: 350px;
+    }
+
+    .flex-wrap-display {
+        flex-wrap: wrap;
+    }
+
+    .header {
+        padding: 1rem 0;
+    }
+
+    .content {
+        margin-top: 35px;
+    }
+
+    .header-navbar {
+        display: none;
+    }
+
+    .offcanvas {
+        max-width: 92%;
+    }
+
+    .is-sticky {
+        left: 2%;
+        width: 96%;
+        padding-right: 10px;
+    }
+
+    .mobile-menu-display {
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile-footer-display {
+        display: none;
+    }
+
+    .footer-content {
+        border-bottom: none;
+    }
+
+    .footer .accordion {
+        display: block;
+    }
+}
+
+@media (min-width: 821px) and (max-width: 1366px) {
+    .is-sticky {
+        width: 96%;
+        left: 2%;
+    }
+
+    .header-navbar ul li {
+        padding: 20px 10px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+    .is-sticky {
+        left: 6%;
+    }
+
+    .footer .account-bar a {
+        padding: 15px 27px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1180px) {
+    .is-sticky {
+        left: 2%;
+    }
 }
